@@ -1,0 +1,35 @@
+#This files lists the course of action to follow through this project
+#It lists overall project goals
+#Then specific chronologic course of action
+
+
+Overall Project Goals: 
+
+
+PHASE 1 :
+
+Create a project to demonstrating the asynchronous capabilities of django,
+through the ASGI (Asynchronous Server Gateway Interface).
+
+It will use the django channels package, and follow this package official tutorial example.
+Daphne will be used as the ASGI compatible application server and Docker for the containerization. 
+
+2 Docker containers will be created, 1 python:alpine based to run django and its dependencies,
+the second container will run the redis:alpine service used in the example.
+Those containers will initially be created independantly, and connected through a manual docker network configuration.
+
+Once proper demonstration of the ASGI, PHASE 1 COMPLETED
+
+PHASE 2 :
+
+Refactoring of the containerization code into docker compose file.
+Experimentation with service start chronology control (depends_on, healthchek parameters and further ...)
+
+Upon successfull implementation of the docker compose refactor and successfull control of service start up process, PHASE 2 COMPLETED
+
+
+Short term course of action :
+
+- create python:alpine container
+- install python and project dependencies
+- Complete django channels tutorial part 1 ( implementation of Daphne server )
