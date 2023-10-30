@@ -9,3 +9,6 @@ cd /target
 python -m django startproject mysite
 cd mysite
 python3 manage.py startapp chat
+
+# Redis setup
+pip install channels_redis
