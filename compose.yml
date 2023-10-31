@@ -1,0 +1,12 @@
+services:
+  python_django:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/target
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
